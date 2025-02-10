@@ -42,6 +42,7 @@ model = GCN(dataset.num_node_features, 16, dataset.num_classes)
 
 data = dataset[0]
 optimizer = torch.optim.SGD(model.parameters(), lr=0.1, weight_decay=1e-4)
+# optimizer = torch.optim.Adam(model.parameters(), lr=0.01, weight_decay=5e-4) # 一般的なoptimizer
 
 def train(epoch):
     model.train()
