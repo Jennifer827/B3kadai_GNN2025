@@ -1,5 +1,11 @@
-numpy
+numpy==1.23.5
 torch-geometric
 networkx
 matplotlib
 scikit-learn
+wheel
+Theano
+keras
+pandas
+rdflib
+tensorflow

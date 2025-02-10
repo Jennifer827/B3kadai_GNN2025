@@ -6,8 +6,7 @@ ENV TZ "Asia/Tokyo"
 RUN apt-get --no-install-recommends update && \
     apt-get --no-install-recommends install -y ffmpeg libsm6 libxext6
 
-RUN adduser dev
-USER dev
+RUN adduser --disabled-password --gecos "" dev
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
@@ -15,3 +14,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install ipdb==0.13.13 \
     opencv-python==4.5.5.64 \
     opencv-python-headless==4.5.5.64
+
+COPY src/relational-gcn /work/src/relational-gcn
+WORKDIR /work/src/relational-gcn
+RUN pip install --no-cache-dir .
+
+USER dev
