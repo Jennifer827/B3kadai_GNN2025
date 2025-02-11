@@ -30,10 +30,16 @@
 ```
 
 - GCN の実験 (AIFB, MUTAG, BGS, AM dataset)
+  - AM, BGS dataset は 4090 ではできなかった.
+
+```bash
+    cd torch-rgcn/
+    python3 experiments/GCN_classify_nodes.py with configs/gcn/nc-[AIFB, MUTAG, BGS, AM].yaml
+```
 
 ## 使用したリポジトリ
 
-- GCN, GAT: https://github.com/thiviyanT/torch-rgcn
+- GCN, GAT: https://github.com/joisino/gnnbook
 - R-GCN: https://github.com/thiviyanT/torch-rgcn
 
 ## 元論文
