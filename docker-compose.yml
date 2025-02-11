@@ -7,7 +7,7 @@ services:
     ipc: host
     volumes:
       - $PWD:/work
-    working_dir: /work
+    working_dir: /work/src
     environment:
       - PYTHONPATH=/work
       - NVIDIA_VISIBLE_DEVICES=0
