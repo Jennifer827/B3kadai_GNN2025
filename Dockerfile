@@ -15,8 +15,9 @@ RUN pip install ipdb==0.13.13 \
     opencv-python==4.5.5.64 \
     opencv-python-headless==4.5.5.64
 
-COPY src/relational-gcn /work/src/relational-gcn
-WORKDIR /work/src/relational-gcn
+# COPY src/relational-gcn /work/src/relational-gcn
+COPY src/torch-rgcn /work/src/torch-rgcn
+WORKDIR /work/src/torch-rgcn
 RUN pip install --no-cache-dir .
 
 USER dev

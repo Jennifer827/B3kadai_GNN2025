@@ -1,1 +1,2 @@
-/src/relational-gcn/rgcn/data/*
+/src/torch-rgcn/data/*
+/src/torch-rgcn/torch_rgcn.egg-info/*
